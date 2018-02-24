@@ -5,14 +5,19 @@
  *  You should be able to run this file from Terminal with:
  *
  *    node ./seed.js
- *  
+ *
  *  And populate your database with all the data from `data.json`
  */
-
+const db = require('./database/index.js');
+const cats = require('./data.json');
 
 // Step 1: Drop old data
-// TODO
+cats.forEach(function(cat) {
+  db.remove(cat);
+})
 
 // Step 2: Add data from `data.json`
-// TODO
+cats.forEach(function(cat) {
+  db.save(cat);
+});
 

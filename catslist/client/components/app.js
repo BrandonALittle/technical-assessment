@@ -1,4 +1,4 @@
-angular.module('catsList', ['catList'])
+angular.module('catsList', ['catList', 'catFetcher'])
   // ROUTING - TODO LATER
   // .config(function($routeProvider) {
   //   $routeProvider
@@ -13,9 +13,12 @@ angular.module('catsList', ['catList'])
   //   })
   // })
 
-  .controller('catsListCtrl', function() {
-    this.cats = Window.cats;
-    console.log(this.cats);
+  .controller('catsListCtrl', function(catFetcher) {
+    this.services = catFetcher;
+    this.setCats = (data) => {
+      this.cats = data;
+    };
+    this.services.fetch(this.setCats);
   })
 
   .component('app', {

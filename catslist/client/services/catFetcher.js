@@ -4,7 +4,8 @@ angular.module('catFetcher', [])
       $http.get('http://127.0.0.1:3000/cats')
         .then(function(response) {
           if (callback) {
-            callback(response);
+            callback(response.data);
+            console.log(response);
           }
         }), function(response) {
           console.log(`Could not get cats from server`);

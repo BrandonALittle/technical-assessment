@@ -12,6 +12,7 @@ app.use(express.static(__dirname + '/../client/dist'));
 app.use(express.static(__dirname + '/../client/components'));
 app.use(express.static(__dirname + '/../client/styles'));
 app.use(express.static(__dirname + '/../data.json'));
+app.use(express.static(__dirname + '/../client/services'));
 
   // augment requests
 app.use(parse.urlencoded({ extended: true }));
@@ -30,7 +31,9 @@ app.post('/cats', function(request, response) {
 
   // get all cats from database
 app.get('/cats', function(request, response) {
-
+  db.retrieveAll(function(results) {
+    response.send(results);
+  });
 });
 
   // delete a cat from database

@@ -9,7 +9,7 @@ const db = require ('./database/index.js');
 // middleware
   // serve static files
 app.use(express.static(__dirname + '/../client/dist'));
-app.use(express.static(__dirname + '/../client/src/components'));
+app.use(express.static(__dirname + '/../client/components'));
 app.use(express.static(__dirname + '/../client/styles'));
 
   // augment requests

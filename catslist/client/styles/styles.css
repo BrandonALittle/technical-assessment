@@ -1,4 +1,10 @@
 li img {
   height: 200px;
   float: left;
+  display: inline-block;
 }
+
+#litterbox {
+  width: 50%;
+}
+

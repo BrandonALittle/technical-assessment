@@ -1,15 +1,21 @@
-angular.module('catsList', ['catList', 'catFetcher'])
-  // ROUTING - TODO LATER
+angular.module('catsList', ['catList', 'catFetcher', 'lendForm', 'ngRoute'])
   // .config(function($routeProvider) {
   //   $routeProvider
   //   .when("/", {
-  //     templateUrl: ""
+  //     template: `<div id="cats">
+  //                  <cat-list cats="$ctrl.cats"></cat-list>
+  //                </div>`,
+  //                controller: 'catsListCtrl'
   //   })
-  //   .when("/borrow", {
-  //     templateUrl: ""
+  //   .when("#borrow", {
+  //     template: `<div id="cats">
+  //                  <cat-list cats="$ctrl.cats"></cat-list>
+  //                </div>`,
+  //                controller: 'catsListCtrl'
   //   })
-  //   .when("/lend", {
-  //     templateUrl: ""
+  //   .when("#lend", {
+  //     template: `<lend-form></lend-form>`,
+  //     controller: 'catsListCtrl'
   //   })
   // })
 
@@ -28,13 +34,14 @@ angular.module('catsList', ['catList', 'catFetcher'])
               `
                 <div id="app container">
                   <div id="navCtrl">
-                    <div><h3>Borrow a Cat</h3></div>
-                    <div><h3>Lend a Cat</h3></div>
+                    <div><a href="#borrow">Borrow a Cat</a> |
+                    <a href="#lend">Lend a Cat</a></div>
                   </div>
                   <div id="main">
-                    <div id="cats">
-                      <cat-list cats="$ctrl.cats"></cat-list>
-                    </div>
+                  <div id="cats">
+                   <cat-list cats="$ctrl.cats"></cat-list>
+                 </div>
+                  <lend-form service="$ctrl.services" set-cats="$ctrl.setCats"></lend-form>
                   </div>
                 </div>
               `

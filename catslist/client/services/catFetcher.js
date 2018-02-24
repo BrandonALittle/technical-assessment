@@ -12,8 +12,8 @@ angular.module('catFetcher', [])
         }
     }
 
-    this.post = function(callback) {
-      $http.post('http://127.0.0.1:3000')
+    this.post = function(data) {
+      $http.post('http://127.0.0.1:3000/cats', data)
         .then(function(response) {
           console.log('Cat added to server');
         }), function(response) {

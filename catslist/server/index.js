@@ -16,17 +16,13 @@ app.use(express.static(__dirname + '/../client/services'));
 
   // augment requests
 app.use(parse.urlencoded({ extended: true }));
-// app.use(parse.json());
-
-// routes
-  // unnecessary ? serve index.html
-app.get('/', function(request, response) {
-
-});
+app.use(parse.json());
 
   // add cat to database
 app.post('/cats', function(request, response) {
-
+  let cat = request.body;
+  db.save(cat);
+  response.end();
 });
 
   // get all cats from database

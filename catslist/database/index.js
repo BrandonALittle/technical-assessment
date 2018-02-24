@@ -34,7 +34,6 @@ let remove = (cat) => {
 let retrieve = (cat, callback) => {
   Cat.find(cat, function(err, results) {
     if (err) return handleError(err);
-    console.log(results);
     callback(results);
   })
 }
@@ -43,7 +42,6 @@ let retrieve = (cat, callback) => {
 let retrieveAll = (callback) => {
   Cat.find({}, function(err, results) {
     if (err) return handleError(err);
-    console.log(results);
     callback(results);
   })
 }

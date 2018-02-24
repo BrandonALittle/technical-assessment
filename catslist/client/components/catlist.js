@@ -1,7 +1,7 @@
 angular.module('catList', ['catOffer'])
   .component('catList', {
     bindings: {
-      // cats: '<'
+      cats: '<'
     }
     template:
               `

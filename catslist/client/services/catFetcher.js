@@ -11,4 +11,13 @@ angular.module('catFetcher', [])
           console.log(`Could not get cats from server`);
         }
     }
+
+    this.post = function(callback) {
+      $http.post('http://127.0.0.1:3000')
+        .then(function(response) {
+          console.log('Cat added to server');
+        }), function(response) {
+          console.log('Unable to post cat to server');
+        }
+    }
   });

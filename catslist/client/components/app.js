@@ -25,8 +25,8 @@ angular.module('catsList', ['catList'])
               `
                 <div id="app container">
                   <div id="navCtrl">
-                    <div></div>
-                    <div></div>
+                    <div><h3>Borrow a Cat</h3></div>
+                    <div><h3>Lend a Cat</h3></div>
                   </div>
                   <div id="main">
                     <div id="cats">

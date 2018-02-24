@@ -6,7 +6,9 @@ angular.module('catList', ['cat'])
     template:
               `
                 <div id="list">
+                <ul>
                   <cat ng-repeat="cat in $ctrl.cats" cat="cat"></cat>
+                </ul>
                 </div>
               `
   });

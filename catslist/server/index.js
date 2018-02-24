@@ -4,13 +4,14 @@ const app = express();
 const parse = require('body-parser');
 
 // local modules
-const db = require ('./database/index.js');
+const db = require ('../database/index.js');
 
 // middleware
   // serve static files
 app.use(express.static(__dirname + '/../client/dist'));
 app.use(express.static(__dirname + '/../client/components'));
 app.use(express.static(__dirname + '/../client/styles'));
+app.use(express.static(__dirname + '/../data.json'));
 
   // augment requests
 app.use(parse.urlencoded({ extended: true }));

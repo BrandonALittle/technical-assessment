@@ -18,7 +18,7 @@ let Cat = mongoose.model('Cat', catSchema);
 let save = (cat) => {
   Cat.create(cat, function(err, newCat) {
     if (err) return handleError(err);
-    console.log('Cat added to database');
+    console.log('Cat added to database: ', cat.name);
   });
 }
 
@@ -26,7 +26,7 @@ let save = (cat) => {
 let remove = (cat) => {
   Cat.remove(cat, function(err, removedCat) {
     if (err) return handleError(err);
-    console.log('Cat removed from database');
+    console.log('Cat removed from database: ', cat.name);
   });
 }
 

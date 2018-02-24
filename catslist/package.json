@@ -5,6 +5,7 @@
   "author": "Hack Reactor <curriculum.team@hackreactor.com>",
   "license": "UNLICENSED",
   "scripts": {
+    "start": "nodemon --inspect server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {

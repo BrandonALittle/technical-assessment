@@ -1,4 +1,4 @@
-angular.module('catsList', ['ngRoute'])
+angular.module('catsList', ['ngRoute', 'catList'])
   // ROUTING - TODO LATER
   // .config(function($routeProvider) {
   //   $routeProvider

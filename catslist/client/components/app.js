@@ -1,4 +1,4 @@
-angular.module('catsList', ['ngRoute', 'catList'])
+angular.module('catsList', ['catList'])
   // ROUTING - TODO LATER
   // .config(function($routeProvider) {
   //   $routeProvider
@@ -14,11 +14,12 @@ angular.module('catsList', ['ngRoute', 'catList'])
   // })
 
   .controller('catsListCtrl', function() {
-
+    this.cats = Window.cats;
+    console.log(this.cats);
   })
 
   .component('app', {
-    controller: catsListCtrl,
+    controller: 'catsListCtrl',
 
     template:
               `
@@ -29,7 +30,7 @@ angular.module('catsList', ['ngRoute', 'catList'])
                   </div>
                   <div id="main">
                     <div id="cats">
-                      <cat-list></cat-list>
+                      <cat-list cats="$ctrl.cats"></cat-list>
                     </div>
                   </div>
                 </div>

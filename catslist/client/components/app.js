@@ -15,7 +15,7 @@ angular.module('catsList', ['catList', 'catFetcher', 'lendForm', 'ngRoute'])
                  controller: 'catsListCtrl'
     })
     .when("/lend", {
-      template: `<lend-form service="$ctrl.services" set-cats="$ctrl.setCats"></lend-form>`,
+      template: `<div id="form"><lend-form service="$ctrl.services" set-cats="$ctrl.setCats"></lend-form></div>`,
       controller: 'catsListCtrl'
     });
   })

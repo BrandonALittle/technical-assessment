@@ -1,4 +1,21 @@
-li img {
-  height: 200px;
+img {
+  height: 15em;
+  float: left;
 }
 
+#main {
+  position: absolute;
+  width: 80%;
+}
+
+#form {
+  margin-left: 200px;
+}
+
+#litterbox {
+  clear: both;
+  padding: 100px;
+}
+
+.details {
+}

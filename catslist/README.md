@@ -5,8 +5,17 @@
 ## How To Start This App
 
 ************************************
+Step 0: Clone the repo to your local machine.
 
-YOU MUST FILL THIS SECTION OUT BEFORE SUBMITTING YOUR WORK.
+Step 1: In your terminal, run ```npm install``` from the directory in which the repo has been cloned. This will install several modules required by the app, including angular, body-parser, express, and mongoose.
+
+Step 2: Make sure you have an instance of mongoDB running in your terminal. You can do this by running the mongod command in your terminal.
+
+Step 3: From the terminal, inside the repo folder, run ```node ./seed.js``` to seed the mongoDB instance with the collection of cats.
+
+Step 4: In your terminal, run ```npm start``` from the repo folder to start the server. The server is set to listen on port 3000.
+
+Step 5: With the server running on your local machine, you may now visit `localhost:3000` to use the app.
 
 ************************************
 

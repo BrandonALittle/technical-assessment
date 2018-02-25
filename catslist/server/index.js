@@ -22,7 +22,7 @@ app.use(parse.json());
 app.post('/cats', function(request, response) {
   let cat = request.body;
   db.save(cat);
-  response.end();
+  response.redirect(301, '/');
 });
 
   // get all cats from database

@@ -35,11 +35,12 @@ angular.module('catsList', ['catList', 'catFetcher', 'lendForm', 'ngRoute'])
               `
                 <div id="app container">
                   <div id="navCtrl">
-                    <div><a href="#borrow">Borrow a Cat</a> |
-                    <a href="#lend">Lend a Cat</a></div>
+                    <ul class="nav">
+                      <li><a href="#borrow">Borrow a Cat</a></li>
+                      <li><a href="#lend">Lend a Cat</a></li>
+                    </ul>
                   </div>
-                  <div id="main" ng-view>
-
+                    <div class="row" id="main" ng-view>
                 </div>
               `
   })

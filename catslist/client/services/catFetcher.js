@@ -5,7 +5,6 @@ angular.module('catFetcher', [])
         .then(function(response) {
           if (callback) {
             callback(response.data);
-            console.log(response);
           }
         }), function(response) {
           console.log(`Could not get cats from server`);

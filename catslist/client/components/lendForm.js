@@ -18,17 +18,24 @@ angular.module('lendForm', [])
               `
                 <div>
                   <h2>List a Cat to Lend</h2>
-                  <form>
-                    Name:
-                    <input type="text" placeholder="Your cat's name" ng-model="$ctrl.cat.name">
-                    Owner's Email:
-                    <input type="text" placeholder="Your email" ng-model="$ctrl.cat.email">
-                    Image URL:
-                    <input type="text" placeholder="URL" ng-model="ctrl.cat.image">
-                    Description:
-                    <button type="submit" ng-click="$ctrl.postCat()">Post Cat</button>
-                    <textarea name="description" placeholder="Describe your cat here..." ng-model="$ctrl.cat.description">
-
+                  <form class="form-horizontal">
+                    <div class="form-group">
+                      <label class="control-label">Name:</label>
+                      <input class="form-control" type="text" placeholder="Your cat's name" ng-model="$ctrl.cat.name">
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label">Owner's Email:</label>
+                      <input class="form-control" type="email" placeholder="Your email" ng-model="$ctrl.cat.email">
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label">Image URL:</label>
+                      <input class="form-control type="text" placeholder="URL" ng-model="ctrl.cat.image">
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label">Description:</label>
+                      <textarea class="form-control" name="description" placeholder="Describe your cat here..." ng-model="$ctrl.cat.description">
+                      <button class="btn btn-default" type="submit" ng-click="$ctrl.postCat()">Post Cat</button>
+                    </div>
                     <br>
                     <br>
                   </form>
